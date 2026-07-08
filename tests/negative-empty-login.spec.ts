@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 import { LoginPage } from "../pages/LoginPage";
 
 test("Boş məlumatlarla sistemə daxil olmaq mümkün olmamalıdır", async ({ page }) => {

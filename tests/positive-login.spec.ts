@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 import process from "node:process";
 import { LoginPage } from "../pages/LoginPage";
 
