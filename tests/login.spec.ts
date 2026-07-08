@@ -3,10 +3,15 @@ import { LoginPage } from "../pages/LoginPage";
 
 test("İstifadəçi sistemə uğurla daxil olmalıdır", async ({ page }) => {
   const loginPage = new LoginPage(page);
+  const email = process.env.USER_EMAIL;
+  const password = process.env.USER_PASSWORD;
+
+  if (!email || !password) {
+    throw new Error("USER_EMAIL və USER_PASSWORD .env faylında təyin edilməlidir");
+  }
 
   await loginPage.open();
-
-  await loginPage.login("imranovfarid@gmail.com", "Farid1020.yeni");
+  await loginPage.login(email, password);
 
   await expect(page).not.toHaveURL(/auth/);
 });

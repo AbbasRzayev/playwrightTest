@@ -8,7 +8,6 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
-
     this.emailInput = page.getByLabel("Email");
     this.passwordInput = page.getByLabel("Şifrə");
     this.loginButton = page.locator('button[type="submit"]');
