@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import process from "node:process";
 import { LoginPage } from "../pages/LoginPage";
 
 test("İstifadəçi sistemə uğurla daxil olmalıdır", async ({ page }) => {
