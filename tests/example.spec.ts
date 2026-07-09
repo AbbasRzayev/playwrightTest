@@ -1,13 +1,13 @@
 import { test, expect } from "./fixtures";
 
-test('has title', async ({ page }) => {
+test('@smoke @regression @playwright @title @positive has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-test('get started link', async ({ page }) => {
+test('@smoke @regression @playwright @navigation @positive get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Click the get started link.
